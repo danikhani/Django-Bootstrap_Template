@@ -21,8 +21,14 @@ Template for starting a containerized **Django** app with **Postgres** running o
 ## Create superuser (Django Admin)
     docker-compose exec web python manage.py createsuperuser
 
+## dev (local) Deployment
+This way it is possible to use pgadmin on web under http://localhost:5051 and develop local.
+
+Make env and install requirments,
+Use docker compose tp start db.
+
 with this user you'll be able to login to the Django /admin page  
-## Dev. Deployment
+## Dockerdev. Deployment
     docker-compose build
     docker-compose up -d (-d for detached)
     docker-compose down
